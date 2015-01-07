@@ -1,7 +1,7 @@
 {
 	"name": "xruff/appsecurity",
 	"type": "library",
-	"description": "Simple Nette Framework",
+	"description": "Nette Framework App Super-Simple Acl Processor",
 	"keywords": ["nette", "security", "login", "acl", "permission", "neon"],
 	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
 	"authors": [
