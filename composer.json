@@ -1,0 +1,30 @@
+{
+	"name": "xruff/appsecurity",
+	"type": "library",
+	"description": "Simple Nette Framework",
+	"keywords": ["nette", "security", "login", "acl", "permission", "neon"],
+	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+	"authors": [
+		{
+			"name": "Pavel Lauko"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/XRuff/AppUtils/issues"
+	},
+	"require": {
+		"nette/utils": "2.2.*",
+		"nette/security": "2.2.*"
+	},
+	"require-dev": {
+		"nette/nette": "~2.2@dev",
+		"nette/neon": "~2.2@dev",
+		"tracy/tracy": "~2.2@dev",
+		"nette/tester": "@dev"
+	},
+	"autoload": {
+		"psr-4": {
+			"XRuff\\App\\Security\\": "src"
+		}
+	}
+}
