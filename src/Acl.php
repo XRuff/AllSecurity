@@ -4,12 +4,20 @@ namespace XRuff\App\Security;
 
 use Nette\Security\Permission;
 
-class Acl extends Permission {
+/**
+ * @author Pavel Lauko <info@webengine.cz>
+ */
+class Acl extends Permission
+{
 
-	/** @var array $params */
+	/** @var array */
 	public $params;
 
-	public function __construct($params) {
+	/**
+	 * @param array $params
+	 */
+	public function __construct($params)
+	{
 
 		$this->params = $params;
 
