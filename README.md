@@ -21,6 +21,7 @@ $ composer require xruff/appsecurity:dev-master
 Documentation
 ------------
 
+Learn more in the [documentation](https://github.com/Ruff/AppSecurity/blob/master/docs/en/index.md).
 
 Tests
 -----
