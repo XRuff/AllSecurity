@@ -17,9 +17,9 @@
 		"nette/security": "2.2.*"
 	},
 	"require-dev": {
-		"nette/nette": "~2.2@dev",
-		"nette/neon": "~2.2@dev",
-		"tracy/tracy": "~2.2@dev",
+		"nette/nette": "~2.3@dev",
+		"nette/neon": "~2.3@dev",
+		"tracy/tracy": "~2.3@dev",
 		"nette/tester": "@dev",
 		"vanio/coding-standards": "^0.1@dev"
 	},
