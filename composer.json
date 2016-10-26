@@ -10,7 +10,7 @@
 		}
 	],
 	"support": {
-		"issues": "https://github.com/XRuff/AppUtils/issues"
+		"issues": "https://github.com/XRuff/AppSecurity/issues"
 	},
 	"require": {
 		"nette/utils": "2.2.*",
