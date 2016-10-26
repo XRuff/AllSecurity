@@ -23,7 +23,7 @@ class AclExtension extends Nette\DI\CompilerExtension
 
 		$configuration = $builder->addDefinition($this->prefix('acl'))
 			->setClass('XRuff\App\Security\Acl')
-			->setArguments(array($config))
+			->setArguments([$config])
 			->setInject(false);
 	}
 
