@@ -2,24 +2,23 @@
 
 namespace XRuff\App\Security;
 
-use	Nette\Object;
-use	Nette\Security\IAuthorizator;
+use Nette\Object;
+use Nette\Security\IAuthorizator;
 
 /**
  * @author Pavel Lauko <info@webengine.cz>
  */
 class UserAuthorizator extends Object implements IAuthorizator
 {
-
 	/** @var Acl */
 	public $acl;
 
 	/**
-	 * @param array $params
+	 * @param Acl $acl
 	 */
-	public function __construct(array $config)
+	public function __construct(Acl $acl)
 	{
-		$this->acl = new Acl($config);
+		$this->acl = $acl;
 	}
 
 	/**

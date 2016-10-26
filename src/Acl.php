@@ -18,7 +18,6 @@ class Acl extends Permission
 	 */
 	public function __construct($params)
 	{
-
 		$this->params = $params;
 
 		foreach ($this->params as $roleName => $roleData) {
@@ -30,13 +29,20 @@ class Acl extends Permission
 			}
 			if (array_key_exists('allow', $roleData)) {
 				foreach ($roleData['allow'] as $resource) {
-					if (!$this->hasResource($resource)) {
-						$this->addResource($resource);
+					if (is_array($resource)) {
+						$resourceName = key($resource);
+						if (!$this->hasResource($resourceName)) {
+							$this->addResource($resourceName);
+						}
+						$this->allow($roleName, $resourceName, $resource[$resourceName]);
+					} else {
+						if (!$this->hasResource($resource)) {
+							$this->addResource($resource);
+						}
+						$this->allow($roleName, $resource, 'view');
 					}
-					$this->allow($roleName, $resource);
 				}
 			}
 		}
 	}
 }
-
