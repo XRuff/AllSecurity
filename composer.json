@@ -20,11 +20,16 @@
 		"nette/nette": "~2.2@dev",
 		"nette/neon": "~2.2@dev",
 		"tracy/tracy": "~2.2@dev",
-		"nette/tester": "@dev"
+		"nette/tester": "@dev",
+		"vanio/coding-standards": "^0.1@dev"
 	},
 	"autoload": {
 		"psr-4": {
 			"XRuff\\App\\Security\\": "src"
 		}
-	}
+	},
+	"scripts": {
+        "lint": "\"vendor/bin/phpcs\" --standard=vendor/vanio/coding-standards/ruleset.xml --extensions=php --encoding=utf-8 --ignore=vendor .",
+        "fix": "\"vendor/bin/phpcbf\" --standard=vendor/vanio/coding-standards/ruleset.xml --extensions=php --encoding=utf-8 --no-patch --ignore=vendor ."
+    }
 }
