@@ -2,14 +2,16 @@
 
 namespace XRuff\App\Security;
 
-use Nette\Object;
 use Nette\Security\IAuthorizator;
+use Nette\SmartObject;
 
 /**
  * @author Pavel Lauko <info@webengine.cz>
  */
-class UserAuthorizator extends Object implements IAuthorizator
+class UserAuthorizator implements IAuthorizator
 {
+    use SmartObject;
+
 	/** @var Acl */
 	public $acl;
 
