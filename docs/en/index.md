@@ -11,9 +11,9 @@ $ composer require XRuff/AppSecurity
 
 Settings
 -----------
-With Nette `2.1` and newer, you can enable the extension using your neon config. Look at comments in `config.neon` file:
+With Nette `2.4` and newer, you can enable the extension using your neon config. Look at comments in `config.neon` file:
 
-```yml
+```neon
 extensions:
 	acl: XRuff\App\Security\DI\AclExtension
 
@@ -50,7 +50,7 @@ acl:
 Usage
 -----------
 
-Sett Authorizator into user object :
+Set Authorizator into user object:
 
 ```php
 
