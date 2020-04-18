@@ -13,18 +13,24 @@ class AclExtension extends Nette\DI\CompilerExtension
 	/**
 	 * @var array
 	 */
-	public $defaults = [];
+	public $defaults = [
+		'guest' => ['allow' => [], 'parent' => null],
+		'user' => ['allow' => [], 'parent' => 'guest'],
+		'admin' => ['allow' => [], 'parent' => 'user'],
+		'superadmin' => ['allow' => [], 'parent' => 'admin'],
+	];
 
 	public function loadConfiguration()
 	{
 		$builder = $this->getContainerBuilder();
+		$this->validateConfig($this->defaults);
 
-		$config = $this->getConfig($this->defaults);
+		$config = $this->config;
 
 		$configuration = $builder->addDefinition($this->prefix('acl'))
 			->setClass('XRuff\App\Security\Acl')
 			->setArguments([$config])
-			->setInject(false);
+			->addTag(Nette\DI\Extensions\InjectExtension::TAG_INJECT);
 	}
 
 	/**

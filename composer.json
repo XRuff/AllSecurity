@@ -13,14 +13,13 @@
 		"issues": "https://github.com/XRuff/AppSecurity/issues"
 	},
 	"require": {
-		"nette/utils": "~2.4",
-		"nette/security": "~2.4"
+		"nette/utils": "^3.0",
+		"nette/security": "^3.0"
 	},
 	"require-dev": {
-		"nette/nette": "~2.4@dev",
-		"nette/neon": "~2.4@dev",
-		"tracy/tracy": "~2.4@dev",
-		"nette/tester": "@dev",
+		"nette/nette": "^3.0",
+		"nette/neon": "^3.0",
+		"tracy/tracy": "^2.7",
 		"vanio/coding-standards": "^0.1@dev"
 	},
 	"autoload": {
