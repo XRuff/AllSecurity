@@ -16,6 +16,7 @@ class AclExtension extends Nette\DI\CompilerExtension
 	public $defaults = [
 		'guest' => ['allow' => [], 'parent' => null],
 		'user' => ['allow' => [], 'parent' => 'guest'],
+		'client' => ['allow' => [], 'parent' => 'user'],
 		'admin' => ['allow' => [], 'parent' => 'user'],
 		'superadmin' => ['allow' => [], 'parent' => 'admin'],
 	];
